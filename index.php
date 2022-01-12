@@ -8,7 +8,11 @@
 $var = 0;
 // TODO votre code ici.
 
+if (empty($var)) {
+    echo '$var vaut soit 0, vide, ou n\'est pas définie';
+}
 
+echo "<br>";
 
 
 /**
@@ -17,7 +21,10 @@ $var = 0;
 $eraseMe = "Please erase me !";
 // TODO votre code ici.
 
+unset($eraseMe);
+echo print_r($eraseMe);
 
+echo "<br>";
 /**
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
@@ -29,7 +36,13 @@ echo "<br>";
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
  */
 // TODO votre code ici.
+$tableau = [
+    "première ligne",
+    "deuxième ligne",
+    "troisième ligne",
+];
 
+echo var_dump($tableau);
 echo "<br>";
 
 
@@ -39,7 +52,12 @@ echo "<br>";
  */
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
-
+if(isset($tab) == "doNotExists"){
+    echo 'Existe';
+}
+else {
+    echo 'Existe pas';
+}
 
 /**
  * 6. Créez une variable contenant:
@@ -63,3 +81,24 @@ $tab = ["test" => true, "name" => "Doe", "age" => 32];
  */
 
 // TODO votre code ici.
+
+$entier = 13;
+function maFonction ($entier) {
+    $bool = true;
+
+    $flottant = 8.5;
+    $chaine = "ma chaine";
+    if ($entier === $bool) {
+        echo "Ma variable est de type: boolean";
+    }
+    elseif ($entier === $entier) {
+        echo "Ma variable est de type: entier";
+    }
+    elseif ($entier === $flottant) {
+        echo "Ma variable est de type: entier";
+    }
+    elseif ($chaine === $entier) {
+        echo "Ma variable est de type: entier";
+    }
+}
+echo maFonction($entier);
